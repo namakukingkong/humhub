@@ -2,6 +2,11 @@ nbproject
 assets/*
 protected/runtime/*
 uploads/*
-.idea/*
-protected/config/_settings.php
 .htaccess
+.buildpath
+.idea
+.project
+.settings
+.DS_Store
+
+protected/config/_settings.php

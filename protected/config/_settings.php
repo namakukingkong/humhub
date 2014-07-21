@@ -39,4 +39,5 @@
   ),
   'name' => 'HumHub',
   'theme' => 'HumHub',
+  'theme' => 'HumHub',
 ); ?>
