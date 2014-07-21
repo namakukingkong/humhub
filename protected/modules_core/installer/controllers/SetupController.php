@@ -89,8 +89,10 @@ class SetupController extends Controller
             $form->attributes = $_POST['DatabaseForm'];
 
             if ($form->validate()) {
-
-                $connectionString = "mysql:host=" . $form->hostname . ";dbname=" . $form->database;
+                if(trim($form->port) == ""){
+                    $form->port = "3306";
+                }
+                $connectionString = "mysql:host=" . $form->hostname . ";port= " .$form->port . ";dbname=" . $form->database;
 
                 $password = $form->password;
                 if ($password == self::PASSWORD_PLACEHOLDER)

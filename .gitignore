@@ -4,3 +4,4 @@ protected/runtime/*
 uploads/*
 .idea/*
 protected/config/_settings.php
+.htaccess

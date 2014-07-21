@@ -26,6 +26,13 @@
         </div>
         <hr/>
         <div class="form-group">
+            <?php echo $form->labelEx($model, 'port'); ?>
+            <?php echo $form->textField($model, 'port', array('class' => 'form-control', 'id' => 'port','placeholder' => '3306')); ?>
+            <p class="help-block"><?php echo Yii::t('InstallerModule.base', 'Default : 3306'); ?></p>
+            <?php echo $form->error($model, 'hostname'); ?>
+        </div>
+        <hr/>
+        <div class="form-group">
             <?php echo $form->labelEx($model, 'username'); ?>
             <?php echo $form->textField($model, 'username', array('class' => 'form-control')); ?>
             <p class="help-block"><?php echo Yii::t('InstallerModule.base', 'Your MySQL username'); ?></p>

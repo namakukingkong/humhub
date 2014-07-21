@@ -30,6 +30,7 @@ class DatabaseForm extends CFormModel {
     public $username;
     public $password;
     public $database;
+    public $port;
 
     /**
      * Declares the validation rules.
@@ -38,6 +39,7 @@ class DatabaseForm extends CFormModel {
         return array(
             array('hostname, username, database', 'required'),
             array('password', 'safe'),
+            array('port', 'safe'),
         );
     }
 
@@ -52,6 +54,7 @@ class DatabaseForm extends CFormModel {
             'username' => Yii::t('InstallerModule.base', 'Username'),
             'password' => Yii::t('InstallerModule.base', 'Password'),
             'database' => Yii::t('InstallerModule.base', 'Name of Database'),
+            'port' => Yii::t('InstallerModule.base', 'Port'),
         );
     }
 
